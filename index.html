@@ -2,8 +2,14 @@
 <html>
   <head>
     <title>Sigly</title>
+    const SIGLY_INIT_SETTINGS={
+   appID:"MEQU86RCX447UTI4DUKYRZ6U5I29DLABXGTJO4XUSI49ROKHQ4FJ27NIF0FDPWH5"
+};
+(function(e,d){try{let t=document.head||document.getElementsByTagName("head")[0];let n="body{opacity:0;background-color:white;}";e.sigly_hidden_style=document.createElement("style");e.sigly_hidden_style.appendChild(document.createTextNode(n));t=document.head||document.getElementsByTagName("head")[0];t.appendChild(e.sigly_hidden_style);e.SIGLY=d;setTimeout((()=>{if(e.SIGLY.webjs_init===undefined){let d=document.head||document.getElementsByTagName("head")[0];d.removeChild(e.sigly_hidden_style);e.sigly_hidden=false}}),2e3)}catch(e){}})(window,SIGLY_INIT_SETTINGS);
   </head>
   <body>
     <p>First, we need to learn some basic HTML.</p>
+    
+    <script id="siglyweb" apiKey="MEQU86RCX447UTI4DUKYRZ6U5I29DLABXGTJO4XUSI49ROKHQ4FJ27NIF0FDPWH5" src="https://siglyapi.jio.com/siglyweb.js" async></script>
   </body>
 </html>
