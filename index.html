@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Sigly</title>
+    <link rel="stylesheet" href="//cdn.webix.com/edge/webix.css" type="text/css"> 
+    <script src="//cdn.webix.com/edge/webix.js" type="text/javascript"></script>  
+
     <script>
       const SIGLY_INIT_SETTINGS={
       appID:"MEQU86RCX447UTI4DUKYRZ6U5I29DLABXGTJO4XUSI49ROKHQ4FJ27NIF0FDPWH5"
@@ -11,6 +14,40 @@
   </head>
   <body>
     <h1>First, we need to learn some basic HTML.</h1>
+    
+    <script type="text/javascript" charset="utf-8">
+       /* app code */
+       webix.ui({
+        view:"window",
+        body:{
+          view:"carousel",
+          id:"carousel",
+          width:464, height:275, 
+          cols:[
+            { css: "image", template:img, data:{src:"http://docs.webix.com/samples/26_carousel/imgs/image001.jpg"} },
+            { css: "image", template:img, data:{src:"http://docs.webix.com/samples/26_carousel/imgs/image002.jpg"} },
+            { css: "image", template:img, data:{src:"http://docs.webix.com/samples/26_carousel/imgs/image003.jpg"} },
+            { css: "image", template:img, data:{src:"http://docs.webix.com/samples/26_carousel/imgs/image004.jpg"} },
+            { css: "image", template:img, data:{src:"http://docs.webix.com/samples/26_carousel/imgs/image005.jpg"} },
+            { css: "image", template:img, data:{src:"http://docs.webix.com/samples/26_carousel/imgs/image006.jpg"} }
+          ]
+        },
+        head:{
+          view:"toolbar", type:"MainBar", elements:[
+            {view:"label", label: "Photobook", align:'left'}
+          ]
+        },
+        top:150,
+        left:150
+      }).show();
+
+      function img(obj){
+        return '<img src="'+obj.src+'" class="content" ondragstart="return false"/>'
+      }
+
+
+    </script>
+
     
     <script id="siglyweb" apiKey="MEQU86RCX447UTI4DUKYRZ6U5I29DLABXGTJO4XUSI49ROKHQ4FJ27NIF0FDPWH5" src="https://siglyapi.jio.com/siglyweb.js" async></script>
   </body>
