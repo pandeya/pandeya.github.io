@@ -1,2 +1,0 @@
-# pandeya.github.io
-Website
