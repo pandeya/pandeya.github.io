@@ -9,8 +9,8 @@ const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
 const modalCloseFunc = function () { modal.classList.add('closed') }
 
 // modal eventListener
-modalCloseOverlay.addEventListener('click', modalCloseFunc);
-modalCloseBtn.addEventListener('click', modalCloseFunc);
+//modalCloseOverlay.addEventListener('click', modalCloseFunc);
+//modalCloseBtn.addEventListener('click', modalCloseFunc);
 
 
 
