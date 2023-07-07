@@ -39,17 +39,19 @@
 </head>
 
 <body>
+    <script>
 
-newTracker('snowplow', 'localhost:9090', {
-  appId: 'sigly-test',
-  plugins: [],
-});
-
-trackPageView();
-enableActivityTracking({
-  heartbeatDelay: 10,
-  minimumVisitLength: 10,
-});
+      newTracker('snowplow', 'localhost:9090', {
+        appId: 'sigly-test',
+        plugins: [],
+      });
+      
+      trackPageView();
+      enableActivityTracking({
+        heartbeatDelay: 10,
+        minimumVisitLength: 10,
+      });
+    </script>
 
   <div class="overlay" data-overlay></div>
 
