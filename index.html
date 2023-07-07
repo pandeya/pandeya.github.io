@@ -34,7 +34,15 @@
 
 
   <script type="text/javascript" async=1>
-;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","./sp.js","snowplow"));
+    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","./sp.js","snowplow"));
+    snowplow('newTracker', 'sp', 'localhost:9090', {
+      appId: 'sigly',
+      discoverRootDomain: true,
+      cookieSameSite: 'Lax',
+      contexts: {
+        webPage: true
+      }
+    });
   </script>
 </head>
 
@@ -3594,16 +3602,10 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
-
-  <script>
-    window.snowplow('newTracker', 'sp1', 'localhost:9090', { 
-      appId: 'my-app-id'
-    })
-    <!--
-    window.snowplow('trackPageView');
-  -->
-
+  <script> 
+    snowplow('trackPageView');
   </script>
+
 
   <!--
     - ionicon link
