@@ -40,6 +40,16 @@
 
 <body>
 
+newTracker('snowplow', 'localhost:9090', {
+  appId: 'sigly-test',
+  plugins: [],
+});
+
+trackPageView();
+enableActivityTracking({
+  heartbeatDelay: 10,
+  minimumVisitLength: 10,
+});
 
   <div class="overlay" data-overlay></div>
 
