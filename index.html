@@ -43,6 +43,14 @@
         webPage: true
       }
     });
+    snowplow('newTracker', 'sp', 'localhost:9090', {
+      appId: 'sigly',
+      contexts: {
+        webPage: true
+      }
+    });
+
+    snowplow('trackPageView');
   </script>
 </head>
 
